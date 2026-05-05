@@ -12,11 +12,6 @@ namespace NotificationSystem
 
         }
 
-        internal void DoCrudOperations()
-        {
-
-        }
-
         internal void SendNotification()
         {
             UserService userService = new UserService();
@@ -25,8 +20,7 @@ namespace NotificationSystem
             {
                 Console.WriteLine("1. Add User");
                 Console.WriteLine("2. Send Notification");
-                Console.WriteLine("3. Do CRUD Operations");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("3. Exit");
                 int.TryParse(Console.ReadLine(), out int choice);
                 switch (choice)
                 {
@@ -37,9 +31,6 @@ namespace NotificationSystem
                         notificationInteract.SendNotification();
                         break;
                     case 3:
-                        DoCrudOperations();
-                        break;
-                    case 4:
                         Environment.Exit(0);
                         break;
                     default:
